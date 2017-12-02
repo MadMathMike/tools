@@ -136,19 +136,11 @@
             "help": "Reporters:<ul><li><c>-appveyor</c>: forces AppVeyor CI mode (normally auto-detected)</li><li><c>-json</c>: show progress messages in JSON format</li><li><c>-quiet</c>: do not show progress messages</li><li><c>-teamcity</c>: forces TeamCity mode (normally auto-detected)</li><li><c>-verbose</c>: show verbose progress messages</li></ul>"
           },
           {
-            "name": "ResultFormat",
-            "type": "ResultFormat",
-            "noArgument": true,
-            "noExtensionMethod": true,
-            "help": "Result formats:<ul><li><c>-xml</c>: output results to xUnit.net v2 XML file</li><li><c>-xmlv1</c>: output results to xUnit.net v1 XML file</li><li><c>-nunit</c>: output results to NUnit v2.5 XML file</li><li><c>-html</c>: output results to HTML file</li></ul>"
-          },
-          {
-            "name": "ResultPath",
-            "type": "string",
+            "name": "ResultReports",
+            "type": "Dictionary<ResultFormat, string>",
             "format": "-{value}",
-            "noExtensionMethod": true,
-            "customValue": true,
-            "help": "The result file output path."
+            "itemFormat": "{key} {value}",
+            "help": "Result formats:<ul><li><c>-xml</c>: output results to xUnit.net v2 XML file</li><li><c>-xmlv1</c>: output results to xUnit.net v1 XML file</li><li><c>-nunit</c>: output results to NUnit v2.5 XML file</li><li><c>-html</c>: output results to HTML file</li></ul>"
           }
         ]
       }
