@@ -6,7 +6,7 @@
     "https://github.com/nuke-build/tools/blob/master/LICENSE"
   ],
   "references": [
-    "https://www.jetbrains.com/help/resharper/dupFinder.html#//article[@class='article']/ul[2]"
+    "https://www.jetbrains.com/help/resharper/dupFinder.html#//div[@class='chapter'][2]/ul"
   ],
   "name": "DupFinder",
   "officialUrl": "https://www.jetbrains.com/help/resharper/dupFinder.html",

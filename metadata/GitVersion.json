@@ -15,7 +15,6 @@
   "packageExecutable": "GitVersion.exe",
   "tasks": [
     {
-      "redirectOutput": true,
       "returnType": "GitVersion",
       "settingsClass": {
         "properties": [
