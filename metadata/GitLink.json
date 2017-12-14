@@ -1,5 +1,5 @@
 {
-  "$schema": "./_schema.json",
+  "$schema": "https://raw.githubusercontent.com/nuke-build/nuke/master/source/Nuke.CodeGeneration/schema.json",
   "license": [
     "Copyright Matthias Koch 2017.",
     "Distributed under the MIT License.",
