@@ -309,6 +309,142 @@
           }
         ]
       }
+    },
+    {
+      "help": "The <c>Octo.exe deploy-release</c> can be used to automate the deployment of releases to environments. This allows you to easily integrate Octopus with other continuous integration servers.",
+      "postfix": "DeployRelease",
+      "definiteArgument": "deploy-release",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Progress",
+            "type": "bool",
+            "format": "--progress",
+            "help": "Show progress of the deployment."
+          },
+          {
+            "name": "ForcePackageDownload",
+            "type": "bool",
+            "format": "--forcepackagedownload",
+            "help": "Whether to force downloading of already installed packages (flag, default false)."
+          },
+          {
+            "name": "WaitForDepployment",
+            "type": "bool",
+            "format": "--waitfordeployment",
+            "help": "Whether to wait synchronously for deployment to finish."
+          },
+          {
+            "name": "DeploymentTimeout",
+            "type": "string",
+            "format": "--deploymenttimeout={value}",
+            "help": "Specifies maximum time (timespan format) that the console session will wait for the deployment to finish(default 00:10:00). This will not stop the deployment. Requires <c>WaitForDeployment</c> parameter set."
+          },
+          {
+            "name": "CancelOnTimeout",
+            "type": "bool",
+            "format": "--cancelontimeout",
+            "help": "Whether to cancel the deployment if the deployment timeout is reached (flag, default false)."
+          },
+          {
+            "name": "DeploymentCheckSleepCycle",
+            "type": "string",
+            "format": "--deploymentchecksleepcycle={value}",
+            "help": "Specifies how much time (timespan format) should elapse between deployment status checks (default 00:00:10)."
+          },
+          {
+            "name": "GuidedFailure",
+            "type": "bool",
+            "format": "--guidedfailure={value}",
+            "help": "Whether to use Guided Failure mode. (True or False. If not specified, will use default setting from environment)."
+          },
+          {
+            "name": "SpecificMachines",
+            "type": "List<string>",
+            "format": "--specificmachines={value}",
+            "help": "A comma-separated list of machines names to target in the deployed environment. If not specified all machines in the environment will be considered."
+          },
+          {
+            "name": "Force",
+            "type": "bool",
+            "format": "--force",
+            "help": "If a project is configured to skip packages with already-installed versions, override this setting to force re-deployment (flag, default false)."
+          },
+          {
+            "name": "Skip",
+            "type": "List<string>",
+            "format": "--skip={value}",
+            "help": "Skip a step by name."
+          },
+          {
+            "name": "NoRawLog",
+            "type": "bool",
+            "format": "--norawlog",
+            "help": "Don't print the raw log of failed tasks."
+          },
+          {
+            "name": "RawLogFile",
+            "type": "string",
+            "format": "--rawlogfile={value}",
+            "help": "Redirect the raw log of failed tasks to a file."
+          },
+          {
+            "name": "Variables",
+            "type": "Dictionary<string, string>",
+            "format": "--variable={value}",
+            "itemFormat": "{key}:{value}",
+            "help": "Values for any prompted variables. For JSON values, embedded quotation marks should be escaped with a backslash. "
+          },
+          {
+            "name": "DeployAt",
+            "type": "string",
+            "format": "--deployat={value}",
+            "help": "Time at which deployment should start (scheduled deployment), specified as any valid DateTimeOffset format, and assuming the time zone is the current local time zone."
+          },
+          {
+            "name": "Tenant",
+            "type": "string",
+            "format": "--tenant={value}",
+            "help": "Create a deployment for this tenant; specify this argument multiple times to add multiple tenants or use <c>*</c> wildcard to deploy to all tenants who are ready for this release (according to lifecycle)."
+          },
+          {
+            "name": "TenantTag",
+            "type": "string",
+            "format": "--tenanttag={value}",
+            "help": "Create a deployment for tenants matching this tag; specify this argument multiple times to build a query/filter with multiple tags, just like you can in the user interface."
+          },
+          {
+            "name": "Project",
+            "type": "string",
+            "format": "--project={value}",
+            "help": "Name of the project."
+          },
+          {
+            "name": "DeployTo",
+            "type": "string",
+            "format": "--deployto={value}",
+            "help": "Environment to deploy to, e.g. <c>Production</c>."
+          },
+          {
+            "name": "Version",
+            "type": "string",
+            "format": "--version={value}",
+            "help": "Version number of the release to deploy. Or specify 'latest' for the latest release."
+          },
+          {
+            "name": "Channel",
+            "type": "string",
+            "format": "--channel={value}",
+            "help": "Channel to use when getting the release to deploy"
+          },
+          {
+            "name": "UpdateVariables",
+            "type": "bool",
+            "format": "--updateVariables",
+            "help": "Overwrite the variable snapshot for the release by re-importing the variables from the project"
+          }
+        ]
+      }
     }
   ],
   "commonTaskProperties": [
