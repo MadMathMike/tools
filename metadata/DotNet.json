@@ -11,6 +11,7 @@
     "https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-restore#//main[@id='main']/div[2]",
     "https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-pack#//main[@id='main']/div[2]",
     "https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-build#//main[@id='main']/div[2]",
+    "https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-clean#//main[@id='main']/div[2]",
     "https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-publish#//main[@id='main']/div[2]",
     "https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-nuget-push#//main[@id='main']/div[2]"
   ],
@@ -553,7 +554,7 @@
       }
     },
     {
-      "help": "<p>The <c>dotnet clean</c> command cleans the output of the previous build. It's implemented as an <a href=\"https://docs.microsoft.com/en-us/visualstudio/msbuild/msbuild-targets\">MSBuild target</a>, so the project is evaluated when the command is run. Only the outputs created during the build are cleaned. Both intermediate <em>(obj)</em> and final output <em>(bin)</em> folders are cleaned.</p>"
+      "help": "<p>The <c>dotnet clean</c> command cleans the output of the previous build. It's implemented as an <a href=\"https://docs.microsoft.com/en-us/visualstudio/msbuild/msbuild-targets\">MSBuild target</a>, so the project is evaluated when the command is run. Only the outputs created during the build are cleaned. Both intermediate <em>(obj)</em> and final output <em>(bin)</em> folders are cleaned.</p>",
       "postfix": "Clean",
       "definiteArgument": "clean",
       "settingsClass": {
